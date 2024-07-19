@@ -23,6 +23,7 @@ class Plugin(mkdocs.plugins.BasePlugin):
         ))
     )
 
+    supports_multiple_instances: bool = True
 
     def on_page_content(self, html, page, config, files):
         content = lxml.html.fromstring(html)
